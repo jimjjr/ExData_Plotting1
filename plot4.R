@@ -61,6 +61,7 @@ remove(HPC_data)
 png("plot4.png", bg="transparent")
 par(mfrow=c(2,2))
 
+## Note that axis labels are supplied by base plotting system defaults ##
 ## Create top-left plot of Global Active Power usage over time
 with(HPC_filtered, {
     plot(datetime, Global_active_power, type="l", 
@@ -86,7 +87,7 @@ with(HPC_filtered, {
     )
 })
 
-## Create bottom-right plot of global reactive power over time
+## Create bottom-right plot of global reactive power over time.
 with(HPC_filtered, {
     plot(datetime, Global_reactive_power, type = "l")
 })

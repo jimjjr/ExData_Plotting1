@@ -52,7 +52,9 @@ HPC_filtered <- filter(HPC_data, datetime > start_date & datetime < end_date)
 remove(HPC_data)
 
 ## Generate a plot of energy sub metering over time with a color-coded curve
-## for each of the three power stations. Save plot to PNG file "plot3.png"
+## for each of the three power stations. Note that x-axis scaling and labeling
+## are automatically added by the plotting system. 
+## Save plot to PNG file "plot3.png"
 png("plot3.png", bg="transparent")
 with(HPC_filtered, {
     plot(datetime, Sub_metering_1, type = "l", col = "black", 

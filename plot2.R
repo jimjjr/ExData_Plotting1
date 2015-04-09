@@ -52,7 +52,8 @@ HPC_filtered <- filter(HPC_data, datetime > start_date & datetime < end_date)
 remove(HPC_data)
 
 ## Generate time-series line graph plot of "Global Active Power (kilowatts)"
-## over time, using datetime parameter for x
+## over time, using datetime parameter for x. Note that x-axis scale labels are 
+## added automatically by the plotting software.
 ## Save to PNG file "plot2.png"
 png("plot2.png", bg="transparent")
 with(HPC_filtered, {
